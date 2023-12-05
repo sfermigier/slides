@@ -1,0 +1,7 @@
+{ 
+    // Allow multiple H1
+    "MD025": false,
+    "MD033": false,
+    "MD013": false,
+    "MD026": false
+}

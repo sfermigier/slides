@@ -16,20 +16,20 @@ size: 16:9
 
 Stefane Fermigier, Abilian // OSXP 2023
 
-- <https://github.com/sfermigier/slides>
-- <https://fermigier.com/presentations/>
+- Slides: <https://github.com/sfermigier/slides> / <https://fermigier.com/presentations/>
+- Demo: <https://github.com/sfermigier/demos>
 
 ---
 
 ## Self introduction
 
-![bg right:35% w:80%](images/sf-it4business.png)
+![bg right:35% w:75%](images/sf-it4business.png)
 
 <div style="font-size: 90%;">
 
 - Web and Python developer since ~1996
 
-- Knows also (bits of) JavaScript, Java, C, C++, Clojure, PHP, Ruby...
+- Know also (bits of) JavaScript, Java, C, C++, Clojure, PHP, Ruby...
 
 - Founder and CEO (+ acting CTO) of Abilian since 2012
 
@@ -646,17 +646,20 @@ Embrace htmx and HDA in Modern Web Development!
 <!-- _footer: "" -->
 
 <style scoped>
-  h1 { font-size: 4.5em; }
+  h1 { font-size: 3.5em; }
 </style>
 
 # Merci!
+
+<div style="font-size: 95%">
 
 Credits: a large part of the content of this presentation is derived from the htmx.org and hypermedia.systems websites. Errors are mine.
 
 Contact:
 
-- sf@abilian.com
-- https://abilian.com/
-- https://fermigier.com/
+- sf@abilian.com / https://abilian.com/
+- sf@fermigier.com / https://fermigier.com/
 
 Slides created with [MARP](https://marp.app/).
+
+</div>

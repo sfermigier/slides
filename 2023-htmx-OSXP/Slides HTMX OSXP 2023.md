@@ -382,6 +382,16 @@ def search():
 
 ---
 
+## Discussion
+
+Template generation should respect the "Locality of Behaviour" (LoB) principle.
+
+> The behaviour of a unit of code should be as obvious as possible by looking only at that unit of code
+
+Splitting the templates should be done a a way the respects this principle. Some patterns have emerged (see, e.g., [Django htmx patterns](https://github.com/spookylukey/django-htmx-patterns)) but rely on specifics features of templates languages or extensions. (No time to discuss today),
+
+---
+
 ## Quick-and-dirty alternative
 
 <!--_footer: ""-->
@@ -456,8 +466,8 @@ Code base (before/after): https://github.com/OpenUnited/
 
 - htmx introduced in ongoing projects (sometimes alongside AlpineJS)
 - Ongoing rewrite of older jQuery- and Vue-based projects
-- Demo on `XXX`.
-- `webbits`: an open source component framework and library for Python & htmx (ongoing project)
+- Demos on <https://github.com/sfermigier/demos>
+- [webbits](https://github.com/abilian/webbits): an open source component framework and library for Python & htmx (ongoing project)
 
 ---
 
@@ -496,6 +506,29 @@ You can still use JavaScript (or Hyperscript) to provide (presumably lightweight
 A DX issue can be the confusion that can appear from mixing 2 different template languages (*e.g.* Jinja and Vue or Alpine).
 
 AlpineJS or Web Components are approaches that can be seen in the wild (and that I have personally experimented).
+
+---
+
+## Short example using Hyperscript
+
+```jinja
+{% extends "_layout.html" %}
+{% block content %}
+<script src="https://unpkg.com/hyperscript.org@0.9.12"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<button 
+    hx-delete="/post{{post.id}}"
+    _="on htmx:confirm(issueRequest)
+        halt the event
+        call Swal.fire({
+            title: 'Confirm', text:'Do you want to delete this post?'
+        })
+        if result.isConfirmed issueRequest()
+    ">Delete</button>
+{% endblock %}
+```
+
+<!--_footer: ""-->
 
 ---
 

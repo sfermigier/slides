@@ -3,7 +3,7 @@ marp: true
 title: "htmx &amp; Hypermedia apps"
 version: 1.0.0
 theme: abilian-2023
-header: "htmx & Hypermedia @ OSXP 2023"
+header: "htmx & Hypermedia apps @ OSXP 2023"
 footer: S. Fermigier / [Abilian](https://abilian.com/)
 paginate: true
 size: 16:9
